@@ -1,8 +1,9 @@
 package org.example;
 
 public class Calculator {
+    // Stores the current result of the calculations
     private Number result;
-
+    // Constructor initializes the calculator with an initial value
     public Calculator(Number initialValue) {
         this.result = initialValue;
     }
@@ -13,7 +14,7 @@ public class Calculator {
     }
 
     public Number getResult() {
-        return result;
+        return result;  // support method chaining
     }
 
     public Number calculate(Operation op, Number num1, Number num2) {

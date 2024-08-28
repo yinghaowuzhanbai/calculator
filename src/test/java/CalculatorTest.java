@@ -5,12 +5,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
+//    test simple function
     @Test
     public void testAddition() {
         Calculator calculator = new Calculator(0);
         assertEquals(5.0, calculator.apply(Operation.ADD, 5).getResult().doubleValue(), 0.0001);
     }
-
+// test chaining and use doubleValue() to judge float
     @Test
     public void testChaining() {
         Calculator calculator = new Calculator(5);
@@ -18,7 +19,7 @@ public class CalculatorTest {
                 .apply(Operation.MULTIPLY, 2)
                 .getResult().doubleValue(), 0.0001);
     }
-
+// test zero case
     @Test
     public void testDivisionByZero() {
         Calculator calculator = new Calculator(10);
